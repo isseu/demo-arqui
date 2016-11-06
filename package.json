@@ -1,0 +1,19 @@
+{
+  "name": "serverless-landingpage",
+  "version": "0.1.0",
+  "description": "Serverless Landingpage service",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.6.7",
+    "s3-deploy": "^0.6.1",
+    "uuid": "^2.0.3"
+  },
+  "scripts": {
+    "deploy-s3": "s3-deploy './dist/**' --cwd './dist/' --region us-east-2 --bucket pagina-serverless",
+    "deploy-lambda": "serverless deploy"
+  }
+}
